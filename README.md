@@ -1,5 +1,5 @@
 # Calculator
 
-Simple calculator app
+Simple calculator app writing on Swift
 
-Простой калькулятор
+Простой калькулятор на Swift
