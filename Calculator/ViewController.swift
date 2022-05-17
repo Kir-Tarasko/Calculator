@@ -105,7 +105,6 @@ class ViewController: UIViewController {
                 return
             }
         default: break
-            
         }
     }
     
