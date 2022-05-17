@@ -89,7 +89,6 @@ class ViewController: UIViewController {
         if stillTyping {
             secondOperand = currentInput
         }
-        
         dotIsPlaced = false
         
         switch operationSign {
