@@ -77,6 +77,8 @@ class ViewController: UIViewController {
         } else {
             secondOperand = firstOperand * currentInput / 100
         }
+        
+        stillTyping = false
     }
     
     @IBAction func plusMinusButtonPressed(_ sender: UIButton) {
@@ -99,7 +101,11 @@ class ViewController: UIViewController {
         case "×":
             operateWithTwoOperands{$0 * $1}
         case "÷":
-            operateWithTwoOperands{$0 / $1}
+            if secondOperand != 0 {
+                operateWithTwoOperands{$0 / $1}
+            } else {
+                return
+            }
         default: break
             
         }
