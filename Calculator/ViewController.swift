@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         set {
             let value = "\(newValue)"
             let valueArray = value.components(separatedBy: ".")
-            if valueArray[1] == "0" {
-                displayResultLabel.text = "\(valueArray[0])"
+            if valueArray.last == "0" {
+                displayResultLabel.text = "\(valueArray.first ?? "")"
             } else {
                 displayResultLabel.text = "\(newValue)"
             }
