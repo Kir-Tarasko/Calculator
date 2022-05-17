@@ -77,7 +77,6 @@ class ViewController: UIViewController {
         } else {
             secondOperand = firstOperand * currentInput / 100
         }
-        
         stillTyping = false
     }
     
