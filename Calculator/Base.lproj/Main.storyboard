@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,234 +13,343 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="J1C-5X-pJx">
-                                <rect key="frame" x="10" y="10" width="355" height="120"/>
+                                <rect key="frame" x="0.0" y="44" width="362" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh6-pL-Wbu">
-                                <rect key="frame" x="10" y="138" width="355" height="529"/>
+                                <rect key="frame" x="0.0" y="164" width="362" height="644"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="69q-KE-SlG">
-                                        <rect key="frame" x="1" y="1" width="353" height="527"/>
+                                        <rect key="frame" x="0.0" y="1" width="352" height="613"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhh-Fs-gM6">
-                                                <rect key="frame" x="0.0" y="0.0" width="353" height="105.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="122.66666666666667"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGH-LL-AQG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="C">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="9UG-om-dhD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="C"/>
+                                                        <connections>
+                                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6I-mT-FIG"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V74-fS-Rpx">
-                                                        <rect key="frame" x="88.5" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="88" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="+/-">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="mnE-bq-4Do"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="+/-"/>
+                                                        <connections>
+                                                            <action selector="plusMinusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GUI-nJ-4Y4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwe-sZ-wLe">
-                                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="176" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="%">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="nS7-XW-ag4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="%"/>
+                                                        <connections>
+                                                            <action selector="percentageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HMK-8h-WAE"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftV-EN-9Ho">
-                                                        <rect key="frame" x="265" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="264" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="+">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="GQ2-nc-Q4h"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="+"/>
+                                                        <connections>
+                                                            <action selector="equalityButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWg-gm-x0M"/>
+                                                            <action selector="twoOperandsSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6X-fk-50h"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SC0-JK-491">
-                                                <rect key="frame" x="0.0" y="105.5" width="353" height="105.5"/>
+                                                <rect key="frame" x="0.0" y="122.66666666666669" width="352" height="122.66666666666669"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XL-o6-7od">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="7">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="YkM-vg-FZ9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="7"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZM-l3-LR2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbg-h2-siS">
-                                                        <rect key="frame" x="88.5" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="88" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="8">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="CbT-is-RFU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="8"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rir-dD-cJl"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-4L-Q4d">
-                                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="176" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="9">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="31a-zi-mgJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="9"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9f-5o-iJ2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEC-0J-zWV">
-                                                        <rect key="frame" x="265" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="264" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="-">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="6gi-mR-ozE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="-"/>
+                                                        <connections>
+                                                            <action selector="equalityButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fI6-cx-PSi"/>
+                                                            <action selector="twoOperandsSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0G-Wq-WA6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYz-bA-ydm">
-                                                <rect key="frame" x="0.0" y="211" width="353" height="105"/>
+                                                <rect key="frame" x="0.0" y="245.33333333333334" width="352" height="122.33333333333334"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxh-GR-OPl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="105"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="122.33333333333333"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="4">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="eQe-WD-gYK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="4"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyn-I0-hMh"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dr-c7-Scq">
-                                                        <rect key="frame" x="88.5" y="0.0" width="88" height="105"/>
+                                                        <rect key="frame" x="88" y="0.0" width="88" height="122.33333333333333"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="5">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="mGo-2q-CnR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="5"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vF-r0-U5c"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-hR-mPZ">
-                                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="105"/>
+                                                        <rect key="frame" x="176" y="0.0" width="88" height="122.33333333333333"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="6">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="4mL-0T-l9w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="6"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAe-qw-7sx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twt-Nt-fHd">
-                                                        <rect key="frame" x="265" y="0.0" width="88" height="105"/>
+                                                        <rect key="frame" x="264" y="0.0" width="88" height="122.33333333333333"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="×">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="KHR-Y7-Fd9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="×"/>
+                                                        <connections>
+                                                            <action selector="equalityButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPn-rq-H42"/>
+                                                            <action selector="twoOperandsSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="alp-EA-M0R"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4H-c8-9qI">
-                                                <rect key="frame" x="0.0" y="316" width="353" height="105.5"/>
+                                                <rect key="frame" x="0.0" y="367.66666666666663" width="352" height="122.66666666666669"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rU4-Sv-waN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="1">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="ILn-Qe-WFu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="1"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRa-m7-vfx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIe-m6-hWF">
-                                                        <rect key="frame" x="88.5" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="88" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="2">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="JyO-yo-2Lc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="2"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="roi-Yv-GX3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyC-R1-ifJ">
-                                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="176" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="3">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="Zah-XA-3v4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="3"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Onm-Bm-uO5"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyu-fd-uJY">
-                                                        <rect key="frame" x="265" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="264" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="÷">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="LIe-mf-7DK"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="rLL-nR-ZXD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="÷"/>
+                                                        <connections>
+                                                            <action selector="equalityButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4df-FW-VAh"/>
+                                                            <action selector="twoOperandsSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bua-Zf-Eht"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddg-Wh-fcC">
-                                                <rect key="frame" x="0.0" y="421.5" width="353" height="105.5"/>
+                                                <rect key="frame" x="0.0" y="490.33333333333343" width="352" height="122.66666666666669"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXI-9N-Spb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="√">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="A1a-eP-n76"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="√"/>
+                                                        <connections>
+                                                            <action selector="squareRootButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlB-wL-rbj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-vu-Gq9">
-                                                        <rect key="frame" x="88.5" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="88" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="0">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="pMg-Fv-jBw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="0"/>
+                                                        <connections>
+                                                            <action selector="numberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GwU-Ar-xeb"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIF-B6-6xI">
-                                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="105.5"/>
+                                                        <rect key="frame" x="176" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title=".">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="Fqq-1z-hqA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="40"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="."/>
+                                                        <connections>
+                                                            <action selector="dotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F1z-Qx-aGX"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AcX-NC-1eR">
-                                                        <rect key="frame" x="265" y="0.0" width="88" height="105.5"/>
+                                                        <rect key="frame" x="264" y="0.0" width="88" height="122.66666666666667"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="=">
-                                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                        </buttonConfiguration>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="6ZN-Rb-HPO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="="/>
+                                                        <connections>
+                                                            <action selector="equalityButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iOw-c9-UOp"/>
+                                                            <action selector="twoOperandsSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FgC-V3-gGl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="69q-KE-SlG" secondAttribute="bottom" constant="1" id="I6d-pU-wq5"/>
+                                    <constraint firstAttribute="trailing" secondItem="69q-KE-SlG" secondAttribute="trailing" constant="10" id="Czr-lS-zE8"/>
+                                    <constraint firstAttribute="bottom" secondItem="69q-KE-SlG" secondAttribute="bottom" constant="30" id="I6d-pU-wq5"/>
                                     <constraint firstItem="69q-KE-SlG" firstAttribute="top" secondItem="Gh6-pL-Wbu" secondAttribute="top" constant="1" id="Rwt-TB-ce1"/>
-                                    <constraint firstAttribute="trailing" secondItem="69q-KE-SlG" secondAttribute="trailing" constant="1" id="cwp-I4-geH"/>
-                                    <constraint firstItem="69q-KE-SlG" firstAttribute="leading" secondItem="Gh6-pL-Wbu" secondAttribute="leading" constant="1" id="i8b-Ro-tSe"/>
+                                    <constraint firstItem="69q-KE-SlG" firstAttribute="leading" secondItem="Gh6-pL-Wbu" secondAttribute="leading" id="ypu-Do-pg8"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="J1C-5X-pJx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="2kk-nm-J1f"/>
-                            <constraint firstItem="Gh6-pL-Wbu" firstAttribute="top" secondItem="J1C-5X-pJx" secondAttribute="bottom" constant="8" symbolic="YES" id="4mW-f3-z9u"/>
-                            <constraint firstItem="J1C-5X-pJx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Axt-i6-QLT"/>
-                            <constraint firstItem="Gh6-pL-Wbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HJ6-IA-8ei"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gh6-pL-Wbu" secondAttribute="trailing" constant="10" id="ZDN-KU-147"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gh6-pL-Wbu" secondAttribute="bottom" id="gs3-MP-GG0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1C-5X-pJx" secondAttribute="trailing" constant="10" id="xbD-wg-pPg"/>
+                            <constraint firstItem="J1C-5X-pJx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2kk-nm-J1f"/>
+                            <constraint firstItem="Gh6-pL-Wbu" firstAttribute="top" secondItem="J1C-5X-pJx" secondAttribute="bottom" id="4mW-f3-z9u"/>
+                            <constraint firstItem="J1C-5X-pJx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Axt-i6-QLT"/>
+                            <constraint firstItem="Gh6-pL-Wbu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HJ6-IA-8ei"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gh6-pL-Wbu" secondAttribute="trailing" id="ZDN-KU-147"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Gh6-pL-Wbu" secondAttribute="bottom" constant="-30" id="gs3-MP-GG0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J1C-5X-pJx" secondAttribute="trailing" id="xbD-wg-pPg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayResultLabel" destination="J1C-5X-pJx" id="hwR-Fr-jlS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="69.642857142857139"/>
+            <point key="canvasLocation" x="18.399999999999999" y="69.458128078817737"/>
         </scene>
     </scenes>
     <resources>
